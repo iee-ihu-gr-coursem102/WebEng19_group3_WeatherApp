@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WeatherApp
 
-## Available Scripts
+## Περιγραφή Εφαρμογής
 
-In the project directory, you can run:
+Το WeatherApp είναι μία web εφαρμογή καιρού που επιτελεί δύο λειτουργίες. Πρώτον, παρέχει στο χρήστη προσωποποιημένη πληροφόρηση για τον καιρό στις πόλεις που θα επιλέξει. Πιο συγκεκριμένα, ο χρήστης αφού δημιουργήσει λογαριασμό στην εφαρμογή (username και password), αναζητά τις πόλεις που θέλει και τις προσθέτει στα αγαπημένα. Κάθε φορά που συνδέεται θα εμφανίζονται οι συγκεριμένες πόλεις, θα παρουσιάζονται τα μετεωρολογικά δεδομένα και θα εμφανίζονται χρήσιμες συμβουλές. Η δεύτερη λειτουργία είναι η πρόταση πόλης για εκδρομή, ανάλογα με τις καιρικές συνθήκες που επιθυμεί ο χρήστης. Για παράδειγμα, εάν θέλει λιακάδα σε μία εβδομάδα και καθόλου βροχή ή αέρα, η εφαρμογή θα προτείνει πόλεις με αυτά τα χαρακτηριστικά.     
 
-### `yarn start`
+## Backend
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Για το Backend θα χρησιμοποιηθεί η php, ενώ η βάση δεδομένων θα είναι η mySQL. Στη βάση θα αποθηκεύονται οι χρήστες (username και password), οι αγαπημένες τους πόλεις, οι χρήσιμες συμβουλές της εφαρμογής, καθώς και οι πόλεις που έχει επιλέξει ο χρήστης για εκδρομή.   
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Frontend
 
-### `yarn test`
+Για το Frontend θα χρησιμοποιηθεί JavaScript και η βιβλιοθήκη React, ενώ για το styling η Bootstrap.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Το API που θα χρησιμοποιηθεί είναι του openweather (https://openweathermap.org/api).
