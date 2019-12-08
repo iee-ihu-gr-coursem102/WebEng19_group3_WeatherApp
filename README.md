@@ -6,7 +6,7 @@
 
 ## Backend
 
-Για το Backend θα χρησιμοποιηθεί η php, ενώ η βάση δεδομένων θα είναι η mySQL. Στη βάση θα αποθηκεύονται οι χρήστες (username και password), οι αγαπημένες τους πόλεις, οι χρήσιμες συμβουλές της εφαρμογής, καθώς και οι πόλεις που έχει επιλέξει ο χρήστης για εκδρομή.   
+Για το Backend θα χρησιμοποιηθεί η php, ενώ η βάση δεδομένων θα είναι η mySQL. Στη βάση θα αποθηκεύονται οι χρήστες (username και password), οι αγαπημένες τους πόλεις, οι προηγούμενες αναζητήσεις τους, οι πόλεις που έχουν επιλέξει για εκδρομή καθώς και οι χρήσιμες συμβουλές που θα παρέχει η εφαρμογή.    
 
 ## Frontend
 
@@ -15,3 +15,11 @@
 ## API
 
 Το API που θα χρησιμοποιηθεί είναι του openweather (https://openweathermap.org/api).
+
+## Αρχιτεκτονική Συστήματος
+
+https://docs.google.com/drawings/d/1o4-7YLt_OA10otQWkVgIKs0wsDAN9wao08LRl9gBacU/edit
+
+## Requirements
+
+https://docs.google.com/spreadsheets/d/1abrpGfW6tTL3lHjfGPz3CeIxl1-pP-xX8mp8rrfW6Bs/edit#gid=0
