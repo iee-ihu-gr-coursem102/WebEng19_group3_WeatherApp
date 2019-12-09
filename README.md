@@ -43,11 +43,11 @@
 
 ## Αρχιτεκτονική Συστήματος
 
-https://docs.google.com/drawings/d/1o4-7YLt_OA10otQWkVgIKs0wsDAN9wao08LRl9gBacU/edit
+https://docs.google.com/drawings/d/1o4-7YLt_OA10otQWkVgIKs0wsDAN9wao08LRl9gBacU/edit?usp=sharing
 
 ## Requirements
 
-https://docs.google.com/spreadsheets/d/1abrpGfW6tTL3lHjfGPz3CeIxl1-pP-xX8mp8rrfW6Bs/edit#gid=0
+https://docs.google.com/spreadsheets/d/1abrpGfW6tTL3lHjfGPz3CeIxl1-pP-xX8mp8rrfW6Bs/edit?usp=sharing
 
 ## URL Εφαρμογής
 
