@@ -44,9 +44,11 @@
 ## Αρχιτεκτονική Συστήματος
 
 System architecture v1:
+
 https://docs.google.com/drawings/d/1o4-7YLt_OA10otQWkVgIKs0wsDAN9wao08LRl9gBacU/edit?usp=sharing
 
 System architecture v2:
+
 https://docs.google.com/drawings/d/1QVIhGgJWk2CqlVXyktP--MX5jLPVYpLAPx84jhavwsc/edit?usp=sharing
 
 ## Requirements
