@@ -48,7 +48,7 @@ export default class Login extends Component {
                     <input type="password" className="form-control" placeholder="Enter password" onChange={this.onTypePassword.bind(this)} />
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block" onClick={this.onClick.bind()}>Submit</button>
+                <button type="submit" className="btn btn-primary btn-block" onClick={this.onClick.bind(this)}>Submit</button>
             </form>
         );
     }
