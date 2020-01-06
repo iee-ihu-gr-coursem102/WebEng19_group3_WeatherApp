@@ -15,6 +15,31 @@ onTypeCityName(e){
 
 onSubmitCity(){
   console.log(this.state.cityName);
+  fetch('api.openweathermap.org/data/2.5/weather?q='+this.state.cityName+'&APPID=fdd8d051b3dcaec03b74c815301614ff', {
+    method: 'POST',
+    headers : { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+     }
+  })
+  .then((response) => {
+     return response.json();
+  })
+  .then((myJson) => {
+    console.log(myJson);
+  });
+}
+//   fetch('api.openweathermap.org/data/2.5/weather?q={this.state.cityName}', {
+//     method: 'POST',
+//   }).then((response) => {
+//     console.log(response);
+//     return response.json();
+//   }).then(action((cityInfo) => {
+//     console.log(cityInfo);
+//   })).catch(function (ex) {
+//     console.log(ex);
+//   })
+// }
  //  try{
  //  const response = await fetch('api.openweathermap.org/data/2.5/weather?q={this.state.cityName}', {
  //     method: 'POST',
@@ -27,7 +52,6 @@ onSubmitCity(){
  // } catch (error) {
  //   console.error('Error:', error);
  // }
-}
     render() {
         return (
           <div className="input-group mb-3">
