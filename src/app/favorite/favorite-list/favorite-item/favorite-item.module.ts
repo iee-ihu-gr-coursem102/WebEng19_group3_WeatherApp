@@ -14,4 +14,3 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   declarations: []
 })
 export class FavoriteItemPageModule {}
-
