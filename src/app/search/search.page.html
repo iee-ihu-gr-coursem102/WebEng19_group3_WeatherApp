@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Search for weather</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar showCancelButton="never" animated autocomplete="on" [(ngModel)]="search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+</ion-content>
+<ion-footer *ngIf="search">
+  <ion-footer *ngIf="search">
+    <ion-toolbar>
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="ion-align-self-center ion-text-center">
+          <ion-button color="primary" (click)="searchForCity()">
+           Search for {{search}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>

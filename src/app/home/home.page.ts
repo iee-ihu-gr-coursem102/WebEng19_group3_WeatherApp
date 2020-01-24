@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as fromApp from '../store/app.reducer';
+import { map, take, exhaustMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home-root',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  styleUrls: ['home.page.scss']
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  auth: any;
+  constructor(private store: Store<fromApp.AppState>) {}
 
-  constructor() {}
+  ngOnInit() {}
 
 }

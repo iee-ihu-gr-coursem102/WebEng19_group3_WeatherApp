@@ -13,5 +13,5 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   ],
   declarations: []
 })
-export class HomePageModule {}
+export class FavoriteItemPageModule {}
 

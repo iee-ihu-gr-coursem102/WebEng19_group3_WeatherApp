@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-title>User Profile</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid fixed="true">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Username</ion-label>
+          <!-- <ion-input [(ngModel)]="currentUser.username"></ion-input> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <!-- <!-- <ion-input [(ngModel)]="currentUser.password"></ion-input> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">First Name</ion-label>
+          <!-- <ion-input [(ngModel)]="currentUser.firstName"></ion-input> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Last Name</ion-label>
+          <!-- <ion-input [(ngModel)]="currentUser.lastName"></ion-input> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <div style="width: 100%" align="center">
+            <ion-avatar class="avatarClass">
+              <!-- <img width="auto" height="auto" *ngIf="currentUser.profile_picture" [src]="currentUser.profile_picture"> -->
+              <img width="auto" height="auto" src="assets/user-picture.svg">
+            </ion-avatar>
+          </div>
+          <ion-button fill="clear" slot="end" size="large">
+            <ion-icon name="cloud-upload"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- <ion-item *ngIf="currentUser.email">
+         Email: {{currentUser.email}}
+        </ion-item> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <!-- <ion-select [(ngModel)]="currentUser.gender" (ionChange)="handleUserProfile()"
+            placeholder="plese select">
+            <ion-select-option value="man">man</ion-select-option>
+            <ion-select-option value="woman">woman</ion-select-option>
+            <ion-select-option value="not_telling">not telling</ion-select-option>
+          </ion-select> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <div align="center" style="width: 100%;">
+        <ion-button (click)="handleUserProfile()" color="primary">Save</ion-button>
+      </div>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
