@@ -1,0 +1,14 @@
+<ion-list>
+  <ion-item>
+        <ion-icon slot='start' name="heart-empty"></ion-icon>
+        city name
+    <div class="item-note" slot="end">
+      <ion-button fill='clear' color="primary" (click)="onCityClick()">
+        <ion-icon slot="icon-only" name="thermometer"></ion-icon>
+      </ion-button>
+      <ion-button fill='clear' color="danger" (click)="onDeleteUser()">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-item>
+</ion-list>
