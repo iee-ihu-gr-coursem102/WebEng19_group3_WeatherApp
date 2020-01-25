@@ -86,16 +86,16 @@ export class AppComponent implements OnInit, OnDestroy {
       ...m,
       title: m.title
     }));
-    if (!this.currentUser.user.superadmin && !this.currentUser.user.permissions.includes('*')) {
-      this.translatedMenu = [];
-      this.appPages.forEach(m => {
-        if (this.currentUser.user.permissions.includes(m.id)) {
-          this.translatedMenu.push(m);
-        } else if (m.id === 'admin-panel' && this.currentUser.user.admin) {
-          this.translatedMenu.push(m);
-        }
-      });
-    }
+    // if (!this.currentUser.user.superadmin && !this.currentUser.user.permissions.includes('*')) {
+    //   this.translatedMenu = [];
+    //   this.appPages.forEach(m => {
+    //     if (this.currentUser.user.permissions.includes(m.id)) {
+    //       this.translatedMenu.push(m);
+    //     } else if (m.id === 'admin-panel' && this.currentUser.user.admin) {
+    //       this.translatedMenu.push(m);
+    //     }
+    //   });
+    // }
   }
 
   async onLogout() {
