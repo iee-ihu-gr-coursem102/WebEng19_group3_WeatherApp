@@ -39,19 +39,7 @@ export class AuthPage implements OnInit {
     this.isLoading = true;
     this.authService.login(user_id, password).subscribe(
       resData => {
-        if (resData.success) {
-          console.log('success');
-          this.isLoading = false;
-          this.router.navigate(['/home']);
-        } else if (resData.comment_id === 'no_user_found') {
-            console.log('no success, no user found');
-            this.isLoading = false;
-            this.modalAlert('wrong_credentials');
-          } else if (resData.comment_id === 'unauthorized_access') {
-            console.log('no success, unauthorized_access');
-            this.isLoading = false;
-            this.modalAlert('wrong_credentials');
-          }
+        console.log(resData);
       },
       error => {
         console.log(error);

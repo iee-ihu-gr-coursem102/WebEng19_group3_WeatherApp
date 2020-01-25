@@ -13,7 +13,6 @@ export class DataStorageService {
     private http: HttpClient,
     private store: Store<fromApp.AppState>
   ) { }
-
   searchForCity(city) {
     return this.http
     .get(

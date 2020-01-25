@@ -3,7 +3,7 @@
     <ion-menu [disabled]="!isAuthenticated">
       <ion-header>
         <ion-toolbar>
-          <ion-title *ngIf="this.currentUser" class="ion-text-center"> Γεία σου! </ion-title>
+          <ion-title *ngIf="this.currentUser" class="ion-text-center"> Γειά σου! </ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
@@ -24,7 +24,7 @@
             <ion-item detail="false" button (click)="onLogout()">
               <ion-icon slot="start" name="exit"></ion-icon>
               <ion-label>
-                Εξοδος
+                'Εξοδος
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
