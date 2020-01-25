@@ -9,28 +9,25 @@ import { DataStorageService } from '../../../shared/data-storage.service';
 })
 export class FavoriteItemPage implements OnInit {
   modal: HTMLIonModalElement;
-  currentUserUserId: string;
-
+  city: any;
+  public currentCity: string;
+  public isCityFound = false;
   constructor(
     public alertController: AlertController,
-    private dataStorageService: DataStorageService,
+    private dataStoraService: DataStorageService
   ) { }
-
-  ngOnInit() {
-    this.currentUserUserId = JSON.parse(localStorage.getItem('userData')).user.user_id;
-  }
 
   async onDeleteUser() {
     const alert = await this.alertController.create({
-      header: 'delete_admin',
-      message: 'delete_message',
+      header: 'Θέλετε να διαγραφή απο τα αγαπημένα',
+      message: '',
       buttons: [{
-        text: 'cancel',
+        text: 'Aκυρο',
         role: 'cancel',
         cssClass: 'secondary',
         handler: (blash) => { }
       }, {
-        text: 'delete',
+        text: 'Διαγραφή',
         handler: () => {
           // this.admin.type = 'delete';
           // this.dataStorageService.deleteAdmin(this.admin);
@@ -41,9 +38,129 @@ export class FavoriteItemPage implements OnInit {
     await alert.present();
   }
 
-  onCityClick() {
-    console.log('city click');
-    
+  async onCityClickThes() {
+    const search = 'thessaloniki';
+    this.dataStoraService.searchForCity(search)
+    .subscribe(
+      async resData => {
+        console.log('resData', resData);
+        if (resData !== 'null') {
+          this.city = resData;
+          this.currentCity = search;
+          this.isCityFound = true;
+          const alert = await this.alertController.create({
+            header: 'Καιρός:',
+            subHeader: this.city.data[0].city_name,
+            message: 'Η θερμοκρασία είναι:' + this.city.data[0].temp + 'c',
+            buttons: ['OK']
+          });
+          await alert.present();
+          console.log(this.city);
+        } else {
+          this.isCityFound = false;
+          const alert = await this.alertController.create({
+            header: 'alert',
+            message: 'resData.comment_id',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    );
   }
+
+  async onCityClickAth() {
+    const search = 'athens';
+    this.dataStoraService.searchForCity(search)
+    .subscribe(
+      async resData => {
+        console.log('resData', resData);
+        if (resData !== 'null') {
+          this.city = resData;
+          this.currentCity = search;
+          this.isCityFound = true;
+          const alert = await this.alertController.create({
+            header: 'Καιρός:',
+            subHeader: this.city.data[0].city_name,
+            message: 'Η θερμοκρασία είναι:' + this.city.data[0].temp + 'c',
+            buttons: ['OK']
+          });
+          await alert.present();
+          console.log(this.city);
+        } else {
+          this.isCityFound = false;
+          const alert = await this.alertController.create({
+            header: 'alert',
+            message: 'resData.comment_id',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    );
+  }
+
+  async onCityClickLar() {
+    const search = 'new york';
+    this.dataStoraService.searchForCity(search)
+    .subscribe(
+      async resData => {
+        console.log('resData', resData);
+        if (resData !== 'null') {
+          this.city = resData;
+          this.currentCity = search;
+          this.isCityFound = true;
+          const alert = await this.alertController.create({
+            header: 'Καιρός:',
+            subHeader: this.city.data[0].city_name,
+            message: 'Η θερμοκρασία είναι:' + this.city.data[0].temp + 'c',
+            buttons: ['OK']
+          });
+          await alert.present();
+          console.log(this.city);
+        } else {
+          this.isCityFound = false;
+          const alert = await this.alertController.create({
+            header: 'alert',
+            message: 'resData.comment_id',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    );
+  }
+
+  async onCityClickLond() {
+    const search = 'london';
+    this.dataStoraService.searchForCity(search)
+    .subscribe(
+      async resData => {
+        console.log('resData', resData);
+        if (resData !== 'null') {
+          this.city = resData;
+          this.currentCity = search;
+          this.isCityFound = true;
+          const alert = await this.alertController.create({
+            header: 'Καιρός:',
+            subHeader: this.city.data[0].city_name,
+            message: 'Η θερμοκρασία είναι:' + this.city.data[0].temp + 'c',
+            buttons: ['OK']
+          });
+          await alert.present();
+          console.log(this.city);
+        } else {
+          this.isCityFound = false;
+          const alert = await this.alertController.create({
+            header: 'alert',
+            message: 'resData.comment_id',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    );
+  }
+
 
 }

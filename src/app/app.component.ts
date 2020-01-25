@@ -20,19 +20,19 @@ export class AppComponent implements OnInit, OnDestroy {
     public appPages = [
     {
       id: 'search',
-      title: 'Search',
+      title: 'Αναζήτηση',
       url: '/search',
       icon: 'search'
     },
     {
       id: 'user-settings',
-      title: 'User Settings',
+      title: 'Προφίλ χρήστη',
       url: '/user-settings',
       icon: 'person'
     },
     {
       id: 'favorite',
-      title: 'Favorite',
+      title: 'Αγαπημένα',
       url: '/favorite',
       icon: 'heart'
     }
@@ -100,14 +100,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
   async onLogout() {
     const alert = await this.alertController.create({
-      header: 'user_logout_dialog',
+      header: 'Έξοδος?',
       buttons: [{
-        text: 'cancel',
+        text: 'άκυρο',
         role: 'cancel',
         cssClass: 'secondary',
         handler: () => { }
       }, {
-        text: 'logout',
+        text: 'έξοδος',
         handler: async () => {
           this.authService.logout();
         }

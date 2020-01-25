@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      <ion-title>User Profile</ion-title>
+      <ion-title>Προφίλ χρήστη</ion-title>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -29,7 +29,7 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label position="stacked">First Name</ion-label>
+          <ion-label position="stacked">Όνομα</ion-label>
           <!-- <ion-input [(ngModel)]="currentUser.firstName"></ion-input> -->
         </ion-item>
       </ion-col>
@@ -37,7 +37,7 @@
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label position="stacked">Last Name</ion-label>
+          <ion-label position="stacked">Επίθετο</ion-label>
           <!-- <ion-input [(ngModel)]="currentUser.lastName"></ion-input> -->
         </ion-item>
       </ion-col>
@@ -64,26 +64,13 @@
         </ion-item> -->
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-label>Gender</ion-label>
-          <!-- <ion-select [(ngModel)]="currentUser.gender" (ionChange)="handleUserProfile()"
-            placeholder="plese select">
-            <ion-select-option value="man">man</ion-select-option>
-            <ion-select-option value="woman">woman</ion-select-option>
-            <ion-select-option value="not_telling">not telling</ion-select-option>
-          </ion-select> -->
-        </ion-item>
-      </ion-col>
-    </ion-row>
   </ion-grid>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
     <ion-row>
       <div align="center" style="width: 100%;">
-        <ion-button (click)="handleUserProfile()" color="primary">Save</ion-button>
+        <ion-button (click)="handleUserProfile()" color="primary">Αποθήκευση</ion-button>
       </div>
     </ion-row>
   </ion-toolbar>

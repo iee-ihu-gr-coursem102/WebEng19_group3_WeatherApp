@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Search for weather</ion-title>
+    <ion-title>Αναζήτηση καιρού</ion-title>
   </ion-toolbar>
   <ion-toolbar>
     <ion-searchbar showCancelButton="never" animated autocomplete="on" [(ngModel)]="search"></ion-searchbar>
@@ -12,7 +12,7 @@
 <ion-content>
   <ion-card *ngIf="isCityFound">
     <ion-card-header>
-      <ion-card-title>Ο Καιρός</ion-card-title>
+      <ion-card-title>Ο Καιρός:</ion-card-title>
       <ion-card-subtitle>{{this.city.data[0].city_name}}</ion-card-subtitle>
       <ion-card-title>{{this.city.data[0].temp}}&#8451;</ion-card-title>
       Αίσθηση σαν: {{this.city.data[0].app_temp}}
