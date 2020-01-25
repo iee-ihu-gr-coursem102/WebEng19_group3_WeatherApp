@@ -15,6 +15,8 @@ import { DataStorageService } from '../shared/data-storage.service';
 export class SearchPage {
   public search = null;
   city: any;
+  public currentCity: string;
+  public isCityFound = false;
 
   constructor(
     private modalController: ModalController,
@@ -27,18 +29,26 @@ export class SearchPage {
   ) { }
 
    async searchForCity() {
-    console.log(this.search);
-    // const loading = await this.loadingController.create({
-    //   message: 'loading'
-    // });
-    // loading.present();
-
-    this.dataStoraService.searchForCity(this.search).subscribe(
-      data => {
-      console.log(data);
-      this.city = data;
-    });
-    console.log(this.city);
+    this.dataStoraService.searchForCity(this.search)
+    .subscribe(
+      async resData => {
+        console.log('resData', resData);
+        if (resData !== 'null') {
+          this.city = resData;
+          this.currentCity = this.search;
+          this.isCityFound = true;
+          console.log(this.city);
+        } else {
+          this.isCityFound = false;
+          const alert = await this.alertController.create({
+            header: 'alert',
+            message: 'resData.comment_id',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    );
   }
 
   closeModal() {
